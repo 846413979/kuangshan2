@@ -1,0 +1,254 @@
+<div class="header">
+    <a href="/" class="logo"><img src="__TMPL__/public/assets/images/logo2.jpg" alt="{$site_info.site_name|default=''}"
+            title="{$site_info.site_name|default=''}" width="100" class="fl" /></a>
+    <a href="#menu" id="nav" class="nav fr" style="z-index:9999;" title="Menu">
+        <img src="__TMPL__/public/assets/images/menu.png" alt="Menu" title="Menu">
+    </a>
+</div>
+<nav id="menu" style="display: none;">
+    <div class="sideMenu">
+        <h3><a href="/">Home</a></h3>
+        <div class="side">
+            <h3><em class="on"></em><a href="{:cmf_url('portal/index/product')}">PRODUCTS</a></h3>
+            <ul style="display: block" class="mm-listview">
+                <foreach name="category_list" item="vo">
+                    <li><a
+                            href="{:cmf_url('portal/index/product',array('id'=>$vo['id']))}"><span>{:ucwords($vo.name)}</span></a>
+                    </li>
+                </foreach>
+            </ul>
+        </div>
+        <div class="side">
+            <h3><em></em><a href="{:cmf_url('portal/index/case')}">INDUSTRY CASE</a></h3>
+            <ul class="mm-listview">
+                <foreach name="case_category" item="vo">
+                    <li><a
+                            href="{:cmf_url('portal/index/case',array('id'=>$vo['id']))}"><span>{:ucwords($vo.name)}</span></a>
+                    </li>
+                </foreach>
+            </ul>
+        </div>
+        <h3>
+            <a href="{:cmf_url('portal/index/service')}">SERVICE</a>
+        </h3>
+        <h3>
+            <a href="{:cmf_url('portal/index/video')}">VIDEO</a>
+        </h3>
+        <h3>
+            <a href="{:cmf_url('portal/index/download')}">DOWNLOAD</a>
+        </h3>
+
+        <div class="side">
+            <h3><em></em><a href="{:cmf_url('portal/index/intro',array('id'=>4))}">ABOUT US</a></h3>
+            <ul class="mm-listview">
+                <li><a href="{:cmf_url('portal/index/intro',array('id'=>4))}"><span>Company
+                            Profile</span></a></li>
+                <foreach name="about_category" item="vo">
+                    <li><a
+                            href="{:cmf_url('portal/index/about',array('id'=>$vo['id']))}"><span>{:ucwords($vo.name)}</span></a>
+                    </li>
+                </foreach>
+            </ul>
+        </div>
+        <h3>
+            <a href="{:cmf_url('portal/index/contact')}">CONTACT US</a>
+        </h3>
+    </div>
+</nav>
+
+<div id="w_grid-1631860362098" class="w_grid-000">
+    <div class="w_grid signal">
+        <div class="e_box e_box-000 p_gridbox">
+            <div id="content_box-1631860362098-0" class="e_box e_box-000 d_gridCell_0 p_gridCell">
+                <div id="w_grid-1631862361403" class="w_grid-001">
+                    <div class="w_grid ">
+                        <div class="e_box e_box-000 p_gridbox">
+                            <div id="content_box-1631862361403-0" class="e_box e_box-000 d_gridCell_0 p_gridCell">
+                                <div id="c_portalResnav_main-16168274662348169" class="c_portalResnav_main-01001002"
+                                    loaded="true" style="overflow: visible;">
+
+
+                                    <!-- PC导航 -->
+                                    <div class="pc_nav">
+
+                                        <header class="header1 f-cb">
+                                            <div class="header-left f-cb">
+                                                <h1 class="fl">
+                                                    <a href="/">
+                                                        <img class="img1" src="__TMPL__/public/assets/images/logo2.jpg"
+                                                            alt="{$site_info.site_name|default=''}"
+                                                            title="{$site_info.site_name|default=''}">
+
+                                                    </a>
+                                                </h1>
+                                                <nav class="fr">
+                                                    <ul class="f-cb">
+                                                        <li class="hvr-left subnav2 js-m js-m-2">
+                                                            <a class="home-dec"
+                                                                href="{:cmf_url('portal/index/product')}">PRODUCTS</a>
+                                                            <div class="nav-sub">
+                                                                <div class="n-nav-sub">
+                                                                    <foreach name="category_list" item="vo">
+                                                                        <a
+                                                                            href="{:cmf_url('portal/index/product',array('id'=>$vo['id']))}">{:ucwords($vo.name)}
+                                                                            <div class="nav-arrow icon-up iconfont">
+                                                                            </div>
+                                                                        </a>
+                                                                    </foreach>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="hvr-left subnav2 js-m js-m-2">
+                                                            <a class="home-dec"
+                                                                href="{:cmf_url('portal/index/case')}">INDUSTRY CASE</a>
+                                                            <div class="nav-sub">
+                                                                <div class="n-nav-sub">
+                                                                    <foreach name="case_category" item="vo">
+                                                                        <a
+                                                                            href="{:cmf_url('portal/index/case',array('id'=>$vo['id']))}">{:ucwords($vo.name)}
+                                                                            <div class="nav-arrow icon-up iconfont">
+                                                                            </div>
+                                                                        </a>
+                                                                    </foreach>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="hvr-left subnav2 js-m js-m-2">
+                                                            <a class="home-dec"
+                                                                href="{:cmf_url('portal/index/service')}">SERVICE</a>
+                                                        </li>
+                                                        <li class="hvr-left subnav2 js-m js-m-2">
+                                                            <a class="home-dec"
+                                                                href="{:cmf_url('portal/index/video')}">VIDEO</a>
+                                                        </li>
+                                                        <li class="hvr-left subnav2 js-m js-m-2">
+                                                            <a class="home-dec"
+                                                                href="{:cmf_url('portal/index/download')}">DOWNLOAD</a>
+                                                        </li>
+                                                        <li class="hvr-left subnav2 js-m js-m-2">
+                                                            <a class="home-dec"
+                                                                href="{:cmf_url('portal/index/intro',array('id'=>4))}">ABOUT
+                                                                US</a>
+                                                            <div class="nav-sub">
+                                                                <div class="n-nav-sub">
+                                                                    <a
+                                                                        href="{:cmf_url('portal/index/intro',array('id'=>4))}">Company
+                                                                        Profile
+                                                                        <div class="nav-arrow icon-up iconfont"></div>
+                                                                    </a>
+                                                                    <foreach name="about_category" item="vo">
+                                                                        <a
+                                                                            href="{:cmf_url('portal/index/about',array('id'=>$vo['id']))}">{:ucwords($vo.name)}
+                                                                            <div class="nav-arrow icon-up iconfont">
+                                                                            </div>
+                                                                        </a>
+                                                                    </foreach>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="hvr-left subnav2 js-m js-m-2">
+                                                            <a class="home-dec" href="{:cmf_url('portal/index/contact')}">
+                                                                <div class="nav-quote">GET A QUOTE</div>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </nav>
+                                                <div class="top-contact_warp">
+                                                    <div class="top_contact">
+                                                        <php>
+                                                            $cleanNumber = preg_replace('/[^0-9]/', '', $site_info['whatsapp']);
+                                                            if (strpos($cleanNumber, '0') === 0) {
+                                                            $cleanNumber = preg_replace('/^0+/', '', $cleanNumber);
+                                                            }
+                                                        </php>
+                                                        <div class="top_contact_item top_contact_email" onclick="gtag_report_conversion('mailto:{$site_info.email}');">
+                                                            <img src="__TMPL__/public/assets/images/email-blue.png" alt="email" title="{$site_info.email}">
+                                                        </div>
+                                                        <div class="top_contact_item top_contact_whatsapp" onclick="gtag_report_conversion('https://api.whatsapp.com/send?phone={$cleanNumber}');">
+                                                            <img src="__TMPL__/public/assets/images/whatsapp-blue.png" alt="whatsapp" title="{$site_info.whatsapp}">
+                                                        </div>
+                                                        <div class="top_contact_item top_contact_wechat">
+                                                            <img src="__TMPL__/public/assets/images/wechat-blue.png" alt="weixin" title="{$site_info.wechat}">
+                                                            <div class="wechat-img">
+                                                                <img src="{:cmf_get_image_url($site_info.weixin)}" alt="weixin" title="{$site_info.wechat}">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </header>
+                                    </div>
+                                    <!--PC导航结束-->
+
+
+
+
+                                    <script>
+                                        // $(function () {
+
+                                        var _li = $('.header2 .sub-menu ul').children('.js-m-3');
+                                        _li.each(function (i, e) {
+                                            $(this).addClass('delay0' + (i + 1));
+                                        });
+
+
+                                        $(window).scroll(function () {
+                                            if ($(window).scrollTop() > 0) {
+                                                $(".header1").addClass("active");
+                                            } else {
+                                                $(".header1").removeClass("active");
+                                            }
+                                        })
+
+                                        $(".header2 .sub-menu .js-m-3").click(function () {
+                                            $(this).children("div.sec-list").slideToggle('slow').end().find('.jt')
+                                                .toggleClass('jtRote');
+                                            $(this).siblings('li').children('.sec-list').slideUp('slow').end().find('.jt')
+                                                .removeClass('jtRote');
+                                        });
+                                        $(".search-btn").on('click', function () {
+                                            $(".search-alert").addClass("active");
+                                        });
+                                        $(".search-alert .close").on('click', function () {
+                                            $(".search-alert").removeClass("active");
+                                        });
+                                        indexnav();
+
+                                        function indexnav() {
+                                            $(".header1 .subnav").hover(function () {
+                                                $(".nav").addClass("on");
+                                                var k = $(this).index();
+                                            }, function () {
+                                                $(".pc-sub-nav").stop(true, false).slideUp(300);
+                                                var k = $(this).index();
+                                                $(".pc-sub-nav").hover(function () {
+                                                    $(".pc-sub-nav").stop(true, false).slideDown(300);
+                                                    $(".subnav").eq(k).addClass("cur").siblings(".subnav").removeClass("cur");
+                                                }, function () {
+                                                    $(".subnav").removeClass("cur");
+                                                    $(".pc-sub-nav").stop(true, false).slideUp(300);
+                                                });
+                                            })
+                                            $(".header1 .subnav2").hover(function () {
+                                                $(this).find(".nav-sub").addClass("active").parents(".subnav2").siblings().find(".nav-sub").removeClass("active");
+                                            }, function () {
+                                                $(this).find(".nav-sub").removeClass("active");
+                                            })
+                                        }
+                                        // })
+                                    </script>
+
+                                    <input type="hidden" class="nav_main_navId"
+                                        value="&amp;navId=1&amp;compId=portalResnav_main-16168274662348169">
+                                    <script>$("div[id^='c_']").attr("loaded", "true")</script>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

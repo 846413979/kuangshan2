@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>{$category.name}_{$site_info.site_name|default=''}</title>
+    <meta name="keywords" content="{$category.name},{$site_info.site_name|default=''},{$site_info.site_seo_keywords|default=''}">
+    <meta name="description"
+          content="{$site_info.site_seo_description|default=''}">
+    <include file="public@head"/>
+    <link href="__TMPL__/public/assets/css/page_impt_zzry.css" rel="stylesheet" type="text/css">
+</head>
+<body data-pageid="a032ce28-fe97-4975-8415-10e514e38358" data-layout="flow"
+      data-tmplid="87b39d0f-a99c-4a72-9ee6-4af7c0f251ef">
+<div class="main pagebox">
+    <include file="public@nav"/>
+    <div id="w_grid-1573265972119" class="w_grid-000">
+        <div class="w_grid signal">
+            <div class="e_box e_box-000 p_gridbox">
+                <div id="content_box-1573265972119-0" class="e_box e_box-000 d_gridCell_0 p_gridCell">
+                    <div id="w_grid-1585814936008" class="w_grid-000" data-tmpleditable="editable">
+                        <div class="w_grid signal">
+                            <div class="e_box e_box-000 p_gridbox">
+                                <div id="content_box-1585814936008-0"
+                                     class="e_box e_box-000 d_gridCell_0 p_gridCell ND_empty"
+                                     data-editablecontent="1585814936008">
+                                    <include file="public@banner"/>
+                                    <include file="public@page_nav"/>
+                                    <div id="w_grid-1616980068781" class="w_grid-000">
+                                        <div class="w_grid signal">
+                                            <div class="e_box e_box-000 p_gridbox">
+                                                <div id="content_box-1616980068781-0"
+                                                     class="e_box e_box-000 d_gridCell_0 p_gridCell">
+                                                    <div id="c_portalResNews_list-16169802853539760"
+                                                         class="c_portalResNews_list-01001006" loaded="true"
+                                                         style="overflow: visible;">
+                                                        <div class="e_stylebox e_ContentOrdinaryStyleBox-001 p_stylebox"
+                                                             id="">
+                                                            <div class="stylebox_top">
+                                                                <div class="stylebox_title">
+                                                                    <h2 class="title_main">{$category.name}</h2>
+                                                                </div>
+                                                            </div>
+                                                            <div class="stylebox_top_line"></div>
+                                                            <div class="stylebox_content">
+
+                                                                <div>
+                                                                    <link href="__TMPL__/public/assets/css/rBQBHVyO-V6Eb7KOAAAAAFzg5Jc254.css"
+                                                                          rel="stylesheet">
+                                                                    <link href="__TMPL__/public/assets/css/rBQBG1yO-W6EBqo4AAAAAPhJO1Q653.css"
+                                                                          rel="stylesheet">
+                                                                    <script type="text/javascript"
+                                                                            src="__TMPL__/public/assets/js/rBQBG1yO-XiEES-UAAAAADlxMLo2739.js"></script>
+                                                                    <script type="text/javascript"
+                                                                            src="__TMPL__/public/assets/js/rBQBHVyO-X2EafR8AAAAAL3h9e02430.js"></script>
+                                                                    <div class="newList cf" id="default-demo">
+                                                                        <php>
+                                                                            $page=[
+                                                                            'list_rows'=>12,
+                                                                            'next'=>'>',
+                                                                            'prev'=>'<'
+                                                                            ];
+                                                                        </php>
+                                                                        <ul class="clearfix p_news"
+                                                                            isserverpaging="true">
+                                                                            <portal:articles  item="vo" order="post.create_time DESC" page="$page"
+                                                                                              relation="categories"
+                                                                                              categoryIds="$category.id"
+                                                                                              returnVarName="articles_data">
+                                                                            <!-- 单个列表开始  -->
+                                                                            <li>
+                                                                                <a class="more"
+                                                                                   href="{:cmf_get_image_url($vo['thumbnail'])}">
+                                                                                    <div class="pic">
+                                                                                        <div class="img00">
+                                                                                            <img src="{:cmf_get_image_url($vo['thumbnail'])}"
+                                                                                                 alt="{$vo.post_title}"
+                                                                                                 title="{$vo.post_title}">
+                                                                                            <span class="cover"></span>
+                                                                                            <span class="cs-add"></span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="con">
+                                                                                        <p>{$vo.post_title}</p>
+                                                                                    </div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <!-- 单个列表结束  -->
+                                                                            </portal:articles>
+                                                                        </ul>
+                                                                        <script type="text/javascript">
+                                                                            $('#default-demo').slickLightbox();
+                                                                        </script>
+                                                                    </div>
+                                                                    <div class="e_box e_OccupyBox-001 p_OccupyBox">
+                                                                        <div class="e_pagebox e_pagebox-000 p_page">
+                                                                            <ul class="pagination">
+                                                                                <page/>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <script>
+
+                                                                        // 时间处理
+                                                                        // var txt = $('.data').html();
+                                                                        // var jqtxt = txt.substr(0, 10);
+                                                                        // $('.data').html(jqtxt)
+                                                                    </script>
+                                                                    <script type="text/javascript">
+                                                                        $comp({
+                                                                            textParams: {
+                                                                                isCutOfName: true,//标题是否自动截取超长显示内容
+                                                                                linesOfCutOfName: 1,//标题超出隐藏的行数设置
+                                                                                isCutOfSummary: true,//概述是否自动截取超长显示内容
+                                                                                linesOfCutOfSummary: 3,//概述超出隐藏的行数设置
+                                                                                categorySummary: true,//分类概述是否自动截取超长显示内容
+                                                                                categorySummaryMaxLen: 2//分类概述超出隐藏的行数设置
+                                                                            },
+                                                                            picParams: {
+                                                                                isOpenCutMode: true,//是否开启裁剪
+                                                                                imageWidth: 200,//设置图片的宽度
+                                                                                imageHeight: 200,//设置图片的高度
+                                                                                definedDefaultImage: false,//是否设置默认图片
+                                                                                defaultImage: "",//设置默认图片的值
+                                                                                appId: 3
+                                                                            },
+                                                                            moParams: {
+                                                                                isOpenCutMode: true,//是否开启裁剪
+                                                                                imageWidth: 80,//设置图片的宽度
+                                                                                imageHeight: 80,//设置图片的高度
+                                                                                definedDefaultImage: false,//是否设置默认图片
+                                                                                defaultImage: "",//设置默认图片的值
+                                                                                appId: 3
+                                                                            },
+                                                                            params: {
+                                                                                "url": "/comp/portalResNews/list.do?compId=portalResNews_list-16169802853539760&cid=6&columnId=",
+                                                                                "appId": "3",
+                                                                                turnPageType: "turnPage"
+                                                                            },
+                                                                            id: "portalResNews_list-16169802853539760", //实例id 服务器传
+                                                                            lib: ["js/portalNews/portalResNews_list-01"], //组件js
+                                                                            noDataFlag: ""
+                                                                        });
+                                                                    </script>
+                                                                    <input type="hidden" class="requsetParam"
+                                                                           value="&amp;cid=6">
+                                                                </div>
+                                                            </div>
+                                                            <div class="stylebox_bottom_line"></div>
+                                                            <div class="stylebox_bottom">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <include file="public@foot"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="__TMPL__/public/assets/js/response.js"></script>
+</body>
+</html>

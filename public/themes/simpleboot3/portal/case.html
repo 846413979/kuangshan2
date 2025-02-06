@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>{:mb_strtoupper($category.name ?? 'case')}_{$site_info.site_name|default=''}</title>
+    <meta name="keywords"
+        content="{:mb_strtoupper($category.name ?? 'case')},{$site_info.site_name|default=''},{$site_info.site_seo_keywords|default=''}">
+    <meta name="description" content="{$site_info.site_seo_description|default=''}">
+    <include file="public@head" />
+    <link href="__TMPL__/public/assets/css/page_impt_zzry.css" rel="stylesheet" type="text/css">
+</head>
+
+<body data-pageid="a032ce28-fe97-4975-8415-10e514e38358" data-layout="flow"
+    data-tmplid="87b39d0f-a99c-4a72-9ee6-4af7c0f251ef">
+    <div class="main pagebox">
+        <include file="public@nav" />
+        <div id="w_grid-1573265972119" class="w_grid-000">
+            <div class="w_grid signal">
+                <div class="e_box e_box-000 p_gridbox">
+                    <div id="content_box-1573265972119-0" class="e_box e_box-000 d_gridCell_0 p_gridCell">
+                        <div id="w_grid-1585814936008" class="w_grid-000" data-tmpleditable="editable">
+                            <div class="w_grid signal">
+                                <div class="e_box e_box-000 p_gridbox">
+                                    <div id="content_box-1585814936008-0"
+                                        class="e_box e_box-000 d_gridCell_0 p_gridCell ND_empty"
+                                        data-editablecontent="1585814936008">
+                                        <include file="public@banner" />
+                                        <div id="w_grid-1614397060551" class="w_grid-000">
+                                            <div class="w_grid signal">
+                                                <div class="e_box e_box-000 p_gridbox">
+                                                    <div id="content_box-1614397060551-0"
+                                                        class="e_box e_box-000 d_gridCell_0 p_gridCell">
+                                                        <div id="w_grid-1614397060561" class="w_grid-001">
+                                                            <div class="w_grid ">
+                                                                <div class="e_box e_box-000 p_gridbox">
+                                                                    <div id="content_box-1614397060561-0"
+                                                                        class="e_box e_box-000 d_gridCell_0 p_gridCell">
+                                                                        <div id="c_portalResIntro_category-1614397060586"
+                                                                            class="c_portalResIntro_category-01001001"
+                                                                            loaded="true" style="overflow: visible;">
+                                                                            <div class="NavList_a1 default-style slide-menu swiper-container swiper-container-horizontal swiper-container-free-mode"
+                                                                                id="NavList_a1">
+                                                                                <ul class="clearfix swiper-wrapper">
+                                                                                    <foreach name="case_category"
+                                                                                        item="vo">
+                                                                                        <li class="swiper-slide swiper-no-swiping"
+                                                                                            data-id="{$vo.id}">
+                                                                                            <a href="{:cmf_url('portal/index/case',array('id'=>$vo['id']))}"
+                                                                                                title="{$vo.name}"
+                                                                                                class="more {:input('id')==$vo['id'] ? 'active' : ''}">{$vo.name}</a>
+                                                                                        </li>
+                                                                                    </foreach>
+                                                                                </ul>
+                                                                                <div id="NavList_a1_menu-slide"
+                                                                                    class="menu-slide"
+                                                                                    style="width: 60px; height: 84px; left: 368px; top: 0px;">
+                                                                                    <i></i>
+                                                                                </div>
+                                                                                <span class="swiper-notification"
+                                                                                    aria-live="assertive"
+                                                                                    aria-atomic="true"></span>
+                                                                            </div>
+                                                                            <script>
+
+                                                                                function getParameterByName(name) {
+                                                                                    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+                                                                                    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+                                                                                        results = regex.exec(location.search);
+                                                                                    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+                                                                                }
+                                                                                console.log(location.href)
+                                                                                var urlName = getParameterByName('id');
+                                                                                $('.NavList_a1 li').each(function () {
+                                                                                    var urlId = $(this).data('id');
+                                                                                    if (urlName == urlId) {
+                                                                                        $(this).find('a').addClass('active');
+                                                                                    }
+                                                                                });
+                                                                            </script>
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- <div id="content_box-1614397060561-1"
+                                                                        class="e_box e_box-000 d_gridCell_1 p_gridCell">
+                                                                        <div id="c_portalResBreadcrumb_nav-1614397060591"
+                                                                            class="c_portalResBreadcrumb_nav-01001003"
+                                                                            loaded="true" style="overflow: visible;">
+                                                                            &lt;!&ndash;homePage 首页&ndash;&gt;
+                                                                            <div class="e_box e_box-000 p_breadcrumbList"
+                                                                                data-ename="面包屑导航">
+
+                                                                                <div
+                                                                                    class="e_breadcrumb e_breadcrumb-001 p_breadcrumbFirst">
+                                                                                    <span class="weizhi"><i
+                                                                                            class="iconfont"></i>Home
+                                                                                        Page:</span>
+                                                                                </div>
+                                                                                &lt;!&ndash;compositePage
+                                                                                应用综合页对象&ndash;&gt;
+                                                                                &lt;!&ndash;navBreadcrumb
+                                                                                应用数据集合对象（list集合）&ndash;&gt;
+
+
+                                                                                <div
+                                                                                    class="e_breadcrumb e_breadcrumb-001 p_breadcrumb contentBox">
+                                                                                    <a href="/">
+                                                                                        <div class="font">
+                                                                                            <span>
+                                                                                                HomePage
+                                                                                            </span>
+                                                                                        </div>
+                                                                                    </a>
+                                                                                </div>
+                                                                                &lt;!&ndash;&ndash;&gt;
+                                                                                &lt;!&ndash; currentPage
+                                                                                当前页对象&ndash;&gt;
+                                                                                <div
+                                                                                    class="e_title e_GuideLabel-001 p_end">
+                                                                                    <div class="font"><span
+                                                                                            class="i_separator">/</span>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div
+                                                                                    class="e_breadcrumb e_breadcrumb-000 p_breadcrumbCurrent">
+                                                                                    <div class="font">
+                                                                                        <span>Case</span>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <script>
+                                                                                    post_title = $("#NavList_a1 a.active").text();
+                                                                                    if (post_title == "") {
+                                                                                        $(".p_breadcrumbCurrent .font span").text('case');
+                                                                                    } else {
+                                                                                        $(".p_breadcrumbCurrent .font span").text(post_title);
+                                                                                    }
+                                                                                </script>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div> -->
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="CategoryList" data-ename="分类列表">
+                                            <select class="category_select" aria-label="category">
+                                                <option value="" data-url="{:cmf_url('portal/index/case')}">Choose Case
+                                                </option>
+                                                <option value="" data-url="{:cmf_url('portal/index/case')}">All Case
+                                                </option>
+                                                <foreach name="case_category" item="vo">
+                                                    <option value="{$vo.id}"
+                                                        data-url="{:cmf_url('portal/index/case',array('id'=>$vo['id']))}">
+                                                        {$vo.name}</option>
+                                                </foreach>
+                                            </select>
+                                        </div>
+                                        <div id="w_grid-1616980068781" class="w_grid-000">
+                                            <div class="w_grid signal">
+                                                <div class="e_box e_box-000 p_gridbox">
+                                                    <div id="content_box-1616980068781-0"
+                                                        class="e_box e_box-000 d_gridCell_0 p_gridCell">
+                                                        <div id="c_portalResNews_list-16169802853539760"
+                                                            class="c_portalResNews_list-01001006" loaded="true"
+                                                            style="overflow: visible;">
+                                                            <div class="e_stylebox e_ContentOrdinaryStyleBox-001 p_stylebox"
+                                                                id="">
+                                                                <div class="stylebox_top">
+                                                                    <div class="stylebox_title">
+                                                                        <h2 class="title_main">
+                                                                            {$category.name|default='case'}</h2>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="stylebox_top_line"></div>
+                                                                <div class="stylebox_content">
+
+                                                                    <div>
+                                                                        <link
+                                                                            href="__TMPL__/public/assets/css/rBQBHVyO-V6Eb7KOAAAAAFzg5Jc254.css"
+                                                                            rel="stylesheet">
+                                                                        <link
+                                                                            href="__TMPL__/public/assets/css/rBQBG1yO-W6EBqo4AAAAAPhJO1Q653.css"
+                                                                            rel="stylesheet">
+                                                                        <script type="text/javascript"
+                                                                            src="__TMPL__/public/assets/js/rBQBG1yO-XiEES-UAAAAADlxMLo2739.js"></script>
+                                                                        <script type="text/javascript"
+                                                                            src="__TMPL__/public/assets/js/rBQBHVyO-X2EafR8AAAAAL3h9e02430.js"></script>
+                                                                        <div class="newList cf" id="default-demo">
+                                                                            <ul class="clearfix p_news"
+                                                                                isserverpaging="true">
+                                                                                <foreach name="list" item="vo">
+                                                                                    <li>
+                                                                                        <notempty name="vo.more.product_id">
+                                                                                            <a class=""
+                                                                                               href="{:cmf_url('portal/index/product_info',array('id'=>$vo['more']['product_id']))}">
+                                                                                        <else />
+                                                                                            <a class="more"
+                                                                                               href="{:cmf_get_image_url($vo['thumbnail'])}" target="_blank">
+                                                                                        </notempty>
+                                                                                            <div class="pic">
+                                                                                                <div class="img00">
+                                                                                                    <img src="{:cmf_get_image_url($vo['thumbnail'])}"
+                                                                                                        alt="{$vo.post_title}"
+                                                                                                        title="{$vo.post_title}">
+                                                                                                    <span
+                                                                                                        class="cover"></span>
+                                                                                                    <span
+                                                                                                        class="cs-add"></span>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="con">
+                                                                                                <p>{$vo.post_title}</p>
+                                                                                            </div>
+                                                                                        </a>
+                                                                                    </li>
+                                                                                </foreach>
+                                                                            </ul>
+                                                                            <script type="text/javascript">
+                                                                                // $('#default-demo').slickLightbox();
+                                                                            </script>
+                                                                        </div>
+                                                                        <div class="e_box e_OccupyBox-001 p_OccupyBox">
+                                                                            <div class="e_pagebox e_pagebox-000 p_page">
+                                                                                <ul class="pagination">
+                                                                                    {$page}
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <input type="hidden" class="requsetParam"
+                                                                            value="&amp;cid=6">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="stylebox_bottom_line"></div>
+                                                                <div class="stylebox_bottom">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <include file="public@foot" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="__TMPL__/public/assets/js/response.js"></script>
+    <script>
+        document.querySelector('.category_select').addEventListener('change', function () {
+            const selectedOption = this.options[this.selectedIndex];
+            const url = selectedOption.getAttribute('data-url');
+            if (url) {
+                window.location.href = url;
+            }
+        });
+    </script>
+</body>
+
+</html>

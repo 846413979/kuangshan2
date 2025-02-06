@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{$site_info.site_name|default=''}</title>
+</head>
+<body>
+    <php>
+        $cleanNumber = preg_replace('/[^0-9]/', '', $site_info['whatsapp']);
+        if (strpos($cleanNumber, '0') === 0) {
+        $cleanNumber = preg_replace('/^0+/', '', $cleanNumber);
+        }
+    </php>
+    <script>
+        window.location.href='https://api.whatsapp.com/send?phone={$cleanNumber}'
+    </script>
+</body>
+</html>

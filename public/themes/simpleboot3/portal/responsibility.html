@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>{:mb_strtoupper($category.name)}_{$site_info.site_name|default=''}</title>
+    <meta name="keywords" content="{$site_info.site_name|default=''}">
+    <meta name="description" content="{$category.name}-{$site_info.site_name|default=''}">
+    <meta name="viewport" content="width=1440">
+    <include file="public@head" />
+    <link href="__TMPL__/public/assets/css/page_impt_gsjj11.css" rel="stylesheet" type="text/css">
+</head>
+
+<body data-pageid="7612b226-6f37-44fa-9066-b7e4909ff010" data-layout="flow"
+    data-tmplid="87b39d0f-a99c-4a72-9ee6-4af7c0f251ef">
+    <div class="main pagebox">
+        <include file="public@nav" />
+        <div id="w_grid-1573265972119" class="w_grid-000">
+            <div class="w_grid signal">
+                <div class="e_box e_box-000 p_gridbox">
+                    <div id="content_box-1573265972119-0" class="e_box e_box-000 d_gridCell_0 p_gridCell">
+                        <div id="w_grid-1585814936008" class="w_grid-000" data-tmpleditable="editable">
+                            <div class="w_grid signal">
+                                <div class="e_box e_box-000 p_gridbox">
+                                    <div id="content_box-1585814936008-0"
+                                        class="e_box e_box-000 d_gridCell_0 p_gridCell ND_empty"
+                                        data-editablecontent="1585814936008">
+                                        <include file="public@banner" />
+                                        <div id="w_grid-1675674752467" class="w_grid-000">
+                                            <div class="w_grid signal">
+                                                <div class="e_box e_box-000 p_gridbox">
+                                                    <div id="content_box-1675674752467-0"
+                                                        class="e_box e_box-000 d_gridCell_0 p_gridCell">
+                                                        <div id="w_grid-1675674752477" class="w_grid-001">
+                                                            <div class="w_grid ">
+                                                                <div class="e_box e_box-000 p_gridbox">
+                                                                    <div id="content_box-1675674752477-0"
+                                                                        class="e_box e_box-000 d_gridCell_0 p_gridCell">
+                                                                        <div id="c_portalResIntro_category-1675674752502"
+                                                                            class="c_portalResIntro_category-01001001"
+                                                                            loaded="true" style="overflow: visible;">
+                                                                            <script type="text/javascript"
+                                                                                src="__TMPL__/public/assets/js/rBQBHVzP2YGEOOgyAAAAAJLRU3c3828.js"></script>
+                                                                            <script type="text/javascript">
+                                                                                $(function () {
+                                                                                    $('.NavList_a1').attr('id', 'NavList_a1').menu({
+                                                                                        a_type: 'slide',
+                                                                                        p_type: false,
+                                                                                        f_type: 'mob_js'
+                                                                                    });
+                                                                                });
+                                                                            </script>
+                                                                            <div class="NavList_a1 default-style slide-menu swiper-container swiper-container-horizontal swiper-container-free-mode"
+                                                                                id="NavList_a1">
+                                                                                <ul class="clearfix swiper-wrapper">
+                                                                                    <li
+                                                                                        class="swiper-slide swiper-no-swiping">
+                                                                                        <a href="{:cmf_url('portal/index/intro',array('id'=>4))}"
+                                                                                            title="CompanyProfile"
+                                                                                            class="more">Company
+                                                                                            Profile</a>
+                                                                                    </li>
+                                                                                    <foreach name="about_category"
+                                                                                        item="vo">
+                                                                                        <li
+                                                                                            class="swiper-slide swiper-no-swiping">
+                                                                                            <a href="{:cmf_url('portal/index/about',array('id'=>$vo['id']))}"
+                                                                                                title="LeadershipSpeech"
+                                                                                                class="more">{$vo.name}</a>
+                                                                                        </li>
+                                                                                    </foreach>
+                                                                                </ul>
+                                                                                <div id="NavList_a1_menu-slide"
+                                                                                    class="menu-slide"
+                                                                                    style="width: 60px; height: 84px; left: 92px; top: 0px;">
+                                                                                    <i></i>
+                                                                                </div>
+                                                                                <span class="swiper-notification"
+                                                                                    aria-live="assertive"
+                                                                                    aria-atomic="true"></span>
+                                                                            </div>
+                                                                            <script>$("div[id^='c_']").attr("loaded", "true")</script>
+                                                                            <script>
+                                                                                var urlName = window.location.pathname;  //获取地址栏中文件名或路径。
+                                                                                $('.NavList_a1 li a').each(function () {        //遍历当前网页导航或分类
+                                                                                    var urlHref = $(this).attr('href');  //获取导航链接地址href值
+                                                                                    if (urlName.indexOf(urlHref) >= 0) {   //检测文件名或路径中是否包含当前链接值
+                                                                                        $(this).addClass('active');
+                                                                                    }
+                                                                                });
+                                                                            </script>
+                                                                        </div>
+                                                                        <div class="CategoryList" data-ename="分类列表">
+                                                                            <select class="category_select"
+                                                                                aria-label="category">
+                                                                                <option value=""
+                                                                                    data-url="{:cmf_url('portal/index/intro',array('id'=>4))}">
+                                                                                    Choose
+                                                                                </option>
+                                                                                <option value=""
+                                                                                    data-url="{:cmf_url('portal/index/intro',array('id'=>4))}">
+                                                                                    Company Profile
+                                                                                </option>
+                                                                                <foreach name="about_category"
+                                                                                    item="vo">
+                                                                                    <option value="{$vo.id}"
+                                                                                        data-url="{:cmf_url('portal/index/about',array('id'=>$vo['id']))}">
+                                                                                        {$vo.name}</option>
+                                                                                </foreach>
+                                                                            </select>
+                                                                        </div>
+                                                                        <div id="c_portalResNews_list-16756748703037930"
+                                                                            class="c_portalResNews_list-01001007"
+                                                                            loaded="true" style="overflow: visible;">
+                                                                            <div class="e_stylebox e_ContentOrdinaryStyleBox-001 p_stylebox"
+                                                                                id="">
+                                                                                <div class="stylebox_top">
+                                                                                    <div class="stylebox_title">
+                                                                                        <h2 class="title_main">
+                                                                                            {$category.name}</h2>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="stylebox_top_line"></div>
+                                                                                <div class="stylebox_content">
+                                                                                    <div>
+                                                                                        <!-- 新闻资讯 -->
+                                                                                        <div class="newBox">
+                                                                                            <div class="newUl  p_news newContainer"
+                                                                                                isserverpaging="true">
+                                                                                                <foreach name="list"
+                                                                                                    item="vo">
+                                                                                                    <div
+                                                                                                        class="p_articles newLi">
+
+                                                                                                        <div
+                                                                                                            class="porTbox">
+                                                                                                            <img src="{:cmf_get_image_url($vo.thumbnail)}"
+                                                                                                                title="{$vo.post_title}"
+                                                                                                                class="js_thumb newImg"
+                                                                                                                alt="{$vo.post_title}">
+                                                                                                            <div
+                                                                                                                class="showBox">
+                                                                                                                <a href="{:cmf_url('portal/index/about_info',array('id'=>$vo['id'],'cid'=>$vo['cid']))}"
+                                                                                                                    target="_self"
+                                                                                                                    class="showBoxLink">{$vo.post_title}</a>
+                                                                                                            </div>
+                                                                                                        </div>
+
+                                                                                                        <div
+                                                                                                            class="porBbox">
+                                                                                                            <div
+                                                                                                                class="leftBox">
+                                                                                                                <!-- 标题 -->
+                                                                                                                <div
+                                                                                                                    class="p_title newTitle">
+                                                                                                                    {$vo.post_title}
+                                                                                                                </div>
+                                                                                                            </div>
+
+                                                                                                        </div>
+
+                                                                                                    </div>
+                                                                                                </foreach>
+
+
+                                                                                            </div>
+                                                                                            <!-- 分页 -->
+                                                                                            <div
+                                                                                                class="e_box e_OccupyBox-001 p_OccupyBox">
+                                                                                                <ul class="pagination">
+                                                                                                    {$page}
+                                                                                                </ul>
+
+                                                                                            </div>
+                                                                                            <!-- 分页end -->
+                                                                                        </div>
+
+                                                                                        <script type="text/javascript">
+                                                                                            $comp({
+                                                                                                textParams: {
+                                                                                                    isCutOfName: true,//标题是否自动截取超长显示内容
+                                                                                                    linesOfCutOfName: 1,//标题超出隐藏的行数设置
+                                                                                                    isCutOfSummary: true,//概述是否自动截取超长显示内容
+                                                                                                    linesOfCutOfSummary: 3,//概述超出隐藏的行数设置
+                                                                                                    categorySummary: true,//分类概述是否自动截取超长显示内容
+                                                                                                    categorySummaryMaxLen: 2//分类概述超出隐藏的行数设置
+                                                                                                },
+                                                                                                picParams: {
+                                                                                                    isOpenCutMode: true,//是否开启裁剪
+                                                                                                    imageWidth: 200,//设置图片的宽度
+                                                                                                    imageHeight: 200,//设置图片的高度
+                                                                                                    definedDefaultImage: false,//是否设置默认图片
+                                                                                                    defaultImage: "",//设置默认图片的值
+                                                                                                    appId: 3
+                                                                                                },
+                                                                                                moParams: {
+                                                                                                    isOpenCutMode: true,//是否开启裁剪
+                                                                                                    imageWidth: 80,//设置图片的宽度
+                                                                                                    imageHeight: 80,//设置图片的高度
+                                                                                                    definedDefaultImage: false,//是否设置默认图片
+                                                                                                    defaultImage: "",//设置默认图片的值
+                                                                                                    appId: 3
+                                                                                                },
+                                                                                                params: {
+                                                                                                    "url": "/comp/portalResNews/list.do?compId=portalResNews_list-16756748703037930&cid=33",
+                                                                                                    "appId": "3",
+                                                                                                    turnPageType: "turnPage"
+                                                                                                },
+                                                                                                id: "portalResNews_list-16756748703037930", //实例id 服务器传
+                                                                                                lib: ["js/portalNews/portalResNews_list-01"], //组件js
+                                                                                                noDataFlag: ""
+                                                                                            });
+                                                                                        </script>
+                                                                                        <input type="hidden"
+                                                                                            class="requsetParam"
+                                                                                            value="&amp;cid=33">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="stylebox_bottom_line"></div>
+                                                                                <div class="stylebox_bottom">
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="w_grid-1675674752487" class="w_grid-000">
+                                            <div class="w_grid signal">
+                                                <div class="e_box e_box-000 p_gridbox">
+                                                    <div id="content_box-1675674752487-0"
+                                                        class="e_box e_box-000 d_gridCell_0 p_gridCell"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <include file="public@foot" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="./culture_files/response.js"></script>
+    <script>
+        document.querySelector('.category_select').addEventListener('change', function () {
+            const selectedOption = this.options[this.selectedIndex];
+            const url = selectedOption.getAttribute('data-url');
+            if (url) {
+                window.location.href = url;
+            }
+        });
+    </script>
+</body>
+
+</html>

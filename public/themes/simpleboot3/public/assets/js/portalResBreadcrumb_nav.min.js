@@ -1,0 +1,1 @@
+$define(["wgt_util"],function(i){return{init:function(){var i=this._params;$compCl.getScope(i.id)}}});

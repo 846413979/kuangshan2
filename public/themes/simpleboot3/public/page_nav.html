@@ -1,0 +1,65 @@
+<div id="w_grid-1614397060551" class="w_grid-000">
+    <div class="w_grid signal">
+        <div class="e_box e_box-000 p_gridbox">
+            <div id="content_box-1614397060551-0"
+                 class="e_box e_box-000 d_gridCell_0 p_gridCell">
+                <div id="w_grid-1614397060561" class="w_grid-001">
+                    <div class="w_grid ">
+                        <div class="e_box e_box-000 p_gridbox">
+                            <div id="content_box-1614397060561-0"
+                                 class="e_box e_box-000 d_gridCell_0 p_gridCell">
+                                <div id="c_portalResIntro_category-1614397060586"
+                                     class="c_portalResIntro_category-01001001"
+                                     loaded="true" style="overflow: visible;">
+                                    <script type="text/javascript"
+                                            src="__TMPL__/public/assets/js/rBQBHVzP2YGEOOgyAAAAAJLRU3c3828.js"></script>
+                                    <script type="text/javascript">
+                                        $(function () {
+                                            $('.NavList_a1').attr('id', 'NavList_a1').menu({
+                                                a_type: 'slide',
+                                                p_type: false,
+                                                f_type: 'mob_js'
+                                            });
+                                        });
+                                    </script>
+                                    <div class="NavList_a1 default-style slide-menu swiper-container swiper-container-horizontal swiper-container-free-mode"
+                                         id="NavList_a1">
+                                        <ul class="clearfix swiper-wrapper">
+                                            <li class="swiper-slide swiper-no-swiping">
+                                                <a href="/intro/4.html"
+                                                   title="CompanyProfile"
+                                                   class="more">Company Profile</a>
+                                            </li>
+                                            <foreach name="about_category" item="vo">
+                                                <li class="swiper-slide swiper-no-swiping">
+                                                    <a href="{:cmf_url('portal/index/about',array('id'=>$vo['id']))}"
+                                                       title="LeadershipSpeech"
+                                                       class="more">{$vo.name}</a>
+                                                </li>
+                                            </foreach>
+                                        </ul>
+                                        <div id="NavList_a1_menu-slide"
+                                             class="menu-slide"
+                                             style="width: 60px; height: 84px; left: 368px; top: 0px;">
+                                            <i></i></div>
+                                        <span class="swiper-notification"
+                                              aria-live="assertive"
+                                              aria-atomic="true"></span></div>
+                                    <script>
+                                        var urlName = window.location.pathname;  //获取地址栏中文件名或路径。
+                                        $('.NavList_a1 li a').each(function () {        //遍历当前网页导航或分类
+                                            var urlHref = $(this).attr('href');  //获取导航链接地址href值
+                                            if (urlName.indexOf(urlHref) >= 0) {   //检测文件名或路径中是否包含当前链接值
+                                                $(this).addClass('active');
+                                            }
+                                        });
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

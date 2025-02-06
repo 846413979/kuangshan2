@@ -1,0 +1,210 @@
+.contact_content_wrap {
+    width: 100%;
+    background: #fff;
+}
+
+.contact_content_wrap .contact_content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.contact_content_wrap .contact_content .contact_content_crumbs {
+    height: 81px;
+    line-height: 81px;
+    font-size: 16px;
+    border-bottom: 1px solid #EEEEEE;
+}
+
+.contact_content_wrap .contact_content .contact_content_crumbs .contact_content_crumbs_title {
+    float: left;
+}
+
+.contact_content_wrap .contact_content .contact_content_crumbs .contact_content_crumbs_list {
+    float: right;
+}
+
+.contact_content_main {
+    margin-top: 60px;
+}
+
+.contact_content_main_solution {
+    width: 100%;
+    height: 111px;
+    background: #E8F1FF;
+}
+
+.contact_content_main_solution_title {
+    font-family: Arial, Arial;
+    font-weight: bold;
+    font-size: 24px;
+    color: #333333;
+    text-align: center;
+    font-style: normal;
+    text-transform: none;
+    padding-top: 20px;
+    line-height: 44px;
+}
+
+.contact_content_main_solution_text {
+    font-family: Arial, Arial;
+    font-weight: 400;
+    font-size: 14px;
+    color: #333333;
+    line-height: 27px;
+    text-align: center;
+    font-style: normal;
+    text-transform: none;
+}
+
+.contact_content_main_solution_text a {
+    cursor: pointer;
+    color: #003F9B;
+}
+
+.contact_content_main_tips {
+    width: 40%;
+    height: auto;
+    background: #FFFFFF;
+    border: 1px solid #DCDCDC;
+    padding: 30px 20px;
+    margin-top: 40px;
+    float: left;
+}
+
+.contact_content_main_tips_title {
+    margin-top: 30px;
+}
+
+.contact_content_main_tips_title img {
+    float: left;
+}
+
+.contact_content_main_tips_title h2 {
+    margin-left: 50px;
+    font-family: Arial, Arial;
+    font-weight: bold;
+    font-size: 32px;
+    color: #333333;
+    line-height: 36px;
+    text-align: left;
+    font-style: normal;
+    text-transform: none;
+}
+
+.contact_content_main_tips_content {
+    font-family: Arial, Arial;
+    font-weight: 400;
+    font-size: 20px;
+    color: #333333;
+    line-height: 40px;
+    text-align: left;
+    font-style: normal;
+    text-transform: none;
+    margin-top: 30px;
+}
+
+.clear_both {
+    clear: both;
+}
+
+.form_wrap {
+    margin-top: 40px;
+    width: 58%;
+    float: left;
+}
+
+.form_wrap .form_label {
+    width: 49%;
+    padding-left: 3%;
+    margin-bottom: 20px;
+    float: left;
+}
+
+.form_wrap .form_label input {
+    width: 100%;
+    height: 58px;
+    background: #FFFFFF;
+    border: 1px solid #DCDCDC;
+    padding-left: 20px;
+}
+
+.form_wrap .form_phone {
+    margin-left: 2%;
+}
+
+.form_wrap .form_email {
+    width: 100%;
+}
+
+.form_wrap .form_email input {
+    width: 100%;
+}
+
+.form_wrap .form_content {
+    width: 100%;
+}
+
+.form_wrap .form_content textarea {
+    width: 100%;
+    height: 350px;
+    background: #FFFFFF;
+    border: 1px solid #DCDCDC;
+    padding: 20px;
+    resize: none;
+}
+
+.form_wrap .form_submit button {
+    width: 220px;
+    height: 60px;
+    background: #003F9B;
+    font-family: Trade Gothic Next LT Pro, Trade Gothic Next LT Pro;
+    font-weight: 400;
+    font-size: 18px;
+    color: #FFFFFF;
+    line-height: 60px;
+    text-align: center;
+    font-style: normal;
+    text-transform: none;
+    border-width: 0;
+    margin-bottom: 100px;
+    cursor: pointer;
+    margin-left: 39px;
+}
+
+@media only screen and (max-width: 768px) {
+    .contact_content_main_solution {
+        height: auto;
+    }
+
+    .contact_content_main_solution_text {
+        padding-bottom: 20px;
+    }
+
+    .contact_content_main_tips {
+        display: none;
+    }
+
+    .form_wrap {
+        width: 100%;
+    }
+
+    .form_wrap .form_label {
+        padding-left: 0px;
+        width: 100%;
+    }
+
+    .form_wrap .form_phone {
+        margin-left: 0;
+    }
+
+    .form_wrap .form_label input {
+        width: 100%;
+    }
+
+    .form_wrap .form_content textarea {
+        width: 100%;
+        height: 150px;
+    }
+}
