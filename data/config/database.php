@@ -26,11 +26,11 @@ return [
             // 服务器地址
             'hostname'          => env('DATABASE_HOSTNAME', '127.0.0.1'),
             // 数据库名
-            'database'          => env('DATABASE_DATABASE', 'www_henanminecra'),
+            'database'          => env('DATABASE_DATABASE', 'kuangshan2'),
             // 用户名
-            'username'          => env('DATABASE_USERNAME', 'www_henanminecra'),
+            'username'          => env('DATABASE_USERNAME', 'root'),
             // 密码
-            'password'          => env('DATABASE_PASSWORD', 'aB49eKMDcKXJt75h'),
+            'password'          => env('DATABASE_PASSWORD', '123456'),
             // 端口
             'hostport'          => env('DATABASE_HOSTPORT', '3306'),
             // 数据库连接参数

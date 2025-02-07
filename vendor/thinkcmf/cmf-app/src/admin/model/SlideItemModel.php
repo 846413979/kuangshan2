@@ -23,4 +23,24 @@ class SlideItemModel extends Model
     protected $type = [
         'more'        => 'array'
     ];
+
+    /**
+     * content 自动转化
+     * @param $value
+     * @return string
+     */
+    public function getContentAttr($value)
+    {
+        return htmlspecialchars_decode($value);
+    }
+
+    /**
+     * content 自动转化
+     * @param $value
+     * @return string
+     */
+    public function setContentAttr($value)
+    {
+        return htmlspecialchars_decode($value, true);
+    }
 }

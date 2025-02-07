@@ -1,4 +1,93 @@
-$(document).ready(function() {
+$(document).ready(function () {
+
+    // 导航栏效果
+    $('.header').hover(function () {
+        $(this).find('.header-left img').attr('src', $(this).find('.header-left img').data('active_url'));
+        $(this).addClass('header-active');
+    }, function () {
+        if ($(window).scrollTop() !== 0) {
+            return;
+        }
+        $(this).find('.header-left img').attr('src', $(this).find('.header-left img').data('default_url'));
+        $(this).removeClass('header-active');
+    });
+
+    // 子导航显示
+    $('.header .nav ul li').hover(function () {
+        $(this).find('.nav-sub').show();
+    }, function () {
+        $(this).find('.nav-sub').hide();
+    })
+
+    // 检查是否在页面顶部
+    $(window).scroll(function () {
+        let $header = $('.header');
+        if ($(window).scrollTop() === 0) {
+            $header.find('.header-left img').attr('src', $header.find('.header-left img').data('default_url'));
+            $header.removeClass('header-active');
+        } else {
+            $header.find('.header-left img').attr('src', $header.find('.header-left img').data('active_url'));
+            $header.addClass('header-active');
+        }
+    });
+
+    // 初始加载时检查一次
+    $(window).trigger('scroll');
+
+    /***** 语言切换 *****/
+    var isRotated = false;
+    $('.header-up-right-item-lang').click(function (){
+        if (isRotated) {
+            $(this).find('.header-up-right-item-lang-dropdown').hide()
+            $(this).find('.header-up-right-item-lang-dropdown-icon').css('transform', 'rotate(0deg)');
+        } else {
+            $(this).find('.header-up-right-item-lang-dropdown').show()
+            $(this).find('.header-up-right-item-lang-dropdown-icon').css('transform', 'rotate(180deg)');
+        }
+        isRotated = !isRotated;
+    })
+
+    // 搜索
+    $('.nav-item-search-icon').click(function () {
+        let keyword = $('#keyword').val();
+        if (keyword == '') {
+            return false;
+        }
+        window.location.href = '/search.html?keyword=' + keyword;
+    })
+
+    $('.footer-form-item-btn').click(function () {
+        let name = $('input[name=footer-name]').val();
+        let email = $('input[name=footer-email]').val();
+        let tel = $('input[name=footer-tel]').val();
+        let message = $('input[name=footer-message]').val();
+        if (name == '' || email == '' || tel == '' || message == '') {
+            alert('Please fill in the complete information')
+            return;
+        }
+        let data = {
+            name: name,
+            email: email,
+            phone: tel,
+            content: message,
+            type: 2,
+        }
+        $.ajax({
+            url: '/portal/index/inquiry',
+            type: 'POST',
+            data: data,
+            dataType: 'json',
+            success: function (res) {
+                if (res.code == 1) {
+                    alert('submit success');
+                } else {
+                    alert('submit failed:' + res.msg);
+                }
+            }
+        })
+    })
+
+
     $('.right_fix_form').click(function() {
         $('.popover_wrap').show();
     });
@@ -14,7 +103,7 @@ $(document).ready(function() {
         let phone = $('#popover-phone').val();// 手机号
         let email = $('#popover-email').val();// 邮箱
         let content = $('#popover-content').val();// 内容
-        
+
         if (!name || !phone || !email || !content){
             alert('Please fill in all the information completely.');
             return;
@@ -23,7 +112,6 @@ $(document).ready(function() {
             "email": email,
             "phone_number": phone
         });
-
         let type = $('#feedback_type').val();
         let data = {
             name: name,
@@ -142,4 +230,5 @@ $(document).ready(function() {
             }
         })
     }
-})
+
+});

@@ -35,6 +35,28 @@
                             <p class="help-block">用于url美化</p>
                         </div>
                     </div>
+                    <tr>
+                        <th>缩略图</th>
+                        <td>
+                            <div>
+                                <input type="hidden" name="thumbnail" id="thumbnail"
+                                       value="{$product.thumbnail|default=''}">
+                                <a href="javascript:uploadOneImage('图片上传','#thumbnail');">
+                                    <if condition="empty($product.thumbnail)">
+                                        <img src="__TMPL__/public/assets/images/default-thumbnail.png"
+                                             id="thumbnail-preview"
+                                             width="135" style="cursor: pointer"/>
+                                        <else/>
+                                        <img src="{:cmf_get_image_preview_url($product.thumbnail)}"
+                                             id="thumbnail-preview"
+                                             width="135" style="cursor: pointer"/>
+                                    </if>
+                                </a>
+                                <br>
+                                <input type="button" class="btn btn-sm btn-cancel-thumbnail" value="取消图片">
+                            </div>
+                        </td>
+                    </tr>
                     <div class="form-group">
                         <label for="input-list_order">排序</label>
                         <div>

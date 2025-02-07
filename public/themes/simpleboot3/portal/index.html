@@ -1,262 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+    <meta charset="UTF-8">
     <title>{$site_info.site_name|default=''}</title>
     <meta name="keywords" content="{$site_info.site_name|default=''}">
     <meta name="description" content="{$site_info.site_name|default=''}">
-    <link rel="stylesheet" href="__TMPL__/public/assets/css/bootstrap.min.css">
-    <include file="public@head" />
-    <link href="__TMPL__/public/assets/css/page_impt_Home.css" rel="stylesheet" type="text/css">
-
+    <include file="public@head"/>
+    <link href="__TMPL__/public/assets/css/index.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="__TMPL__/public/assets/js/index.js"></script>
 </head>
+<body>
 
-<body data-pageid="80232ec1-fa9e-4bba-81eb-1c60052657e5" data-layout="flow"
-    data-tmplid="87b39d0f-a99c-4a72-9ee6-4af7c0f251ef">
-    <div class="main pagebox">
-        <include file="public@nav" />
-        <div id="w_grid-1573265972119" class="w_grid-000">
-            <div class="w_grid signal">
-                <div class="e_box e_box-000 p_gridbox">
-                    <div id="content_box-1573265972119-0" class="e_box e_box-000 d_gridCell_0 p_gridCell">
-                        <div id="w_grid-1585814936008" class="w_grid-000" data-tmpleditable="editable">
-                            <div class="w_grid signal">
-                                <div class="e_box e_box-000 p_gridbox">
-                                    <div id="content_box-1585814936008-0"
-                                        class="e_box e_box-000 d_gridCell_0 p_gridCell ND_empty"
-                                        data-editablecontent="1585814936008">
-                                        <div id="w_grid-1614152818809" class="w_grid-000">
-                                            <div class="w_grid signal">
-                                                <div class="e_box e_box-000 p_gridbox">
-                                                    <div id="content_box-1614152818809-0"
-                                                        class="e_box e_box-000 d_gridCell_0 p_gridCell">
-                                                        <div id="c_portalResEbizads_banner-16237175821954808"
-                                                            class="c_portalResEbizads_banner-01001" loaded="true"
-                                                            style="overflow: visible;">
+<include file="public@nav"/>
 
-                                                            <div class="bannerBox" style="height: 537px;">
-                                                                <div id="carouselExampleIndicators"
-                                                                    class="carousel slide" data-ride="carousel">
-                                                                    <ol class="carousel-indicators">
-                                                                        <foreach name="slides" item="vo">
-                                                                            <li data-target="#carouselExampleIndicators"
-                                                                                data-slide-to="{$key}"
-                                                                                class="{$key==0 ? 'active' : ''}"></li>
-                                                                        </foreach>
-                                                                    </ol>
-                                                                    <div class="carousel-inner">
-                                                                        <foreach name="slides" item="vo">
-                                                                            <div
-                                                                                class="carousel-item {$key==0 ? 'active' : ''}">
-                                                                                <img src="{:cmf_get_image_url($vo.image)}"
-                                                                                    class="d-block w-100"
-                                                                                    alt="{$vo.title}">
-                                                                            </div>
-                                                                        </foreach>
-                                                                    </div>
-                                                                    <button class="carousel-control-prev" type="button"
-                                                                        data-target="#carouselExampleIndicators"
-                                                                        data-slide="prev">
-                                                                        <span class="carousel-control-prev-icon"
-                                                                            aria-hidden="true"></span>
-                                                                        <span class="sr-only">Previous</span>
-                                                                    </button>
-                                                                    <button class="carousel-control-next" type="button"
-                                                                        data-target="#carouselExampleIndicators"
-                                                                        data-slide="next">
-                                                                        <span class="carousel-control-next-icon"
-                                                                            aria-hidden="true"></span>
-                                                                        <span class="sr-only">Next</span>
-                                                                    </button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="main_content_wrap">
-                                                            <!--热门产品-->
-                                                            <div class="hot_product">
-                                                                <div class="hot_product_title">
-                                                                    <span>HOT PRODUCTS</span>
-                                                                </div>
-                                                                <div class="hot_product_more">
-                                                                    <a href="{:cmf_url('portal/index/product')}"
-                                                                        aria-label="product">
-                                                                        <img src="__TMPL__/public/assets/images/more.png"
-                                                                            data-active_img="__TMPL__/public/assets/images/more-active.png"
-                                                                            data-normal_img="__TMPL__/public/assets/images/more.png"
-                                                                            alt="more_product" title="more_product">
-                                                                    </a>
-                                                                </div>
-                                                                <div class="hot_product_list">
-                                                                    <div class="hot_product_all">
-                                                                        <ul>
-                                                                            <foreach name="hot_products" item="vo"
-                                                                                key="k">
-                                                                                <if condition="$k % 3 == 0 && $k != 0">
-                                                                        </ul>
-                                                                        <ul>
-                                                                            </if>
-                                                                            <li class="hot_product_item">
-                                                                                <a href="{:cmf_url('portal/index/product_info', array('id' => $vo['id']))}"
-                                                                                    aria-label="{$vo.title}">
-                                                                                    <img src="{:cmf_get_image_url($vo.thumbnail)}"
-                                                                                        alt="hot_product"
-                                                                                        title="{$vo.title}">
-                                                                                    <p>{$vo.title}</p>
-                                                                                </a>
-                                                                            </li>
-                                                                            </foreach>
-                                                                        </ul>
-                                                                    </div>
-                                                                    <div class="hot_product_line">
-                                                                        <gt name="hot_products|count" value="3">
-                                                                            <div class="hot_product_line_item active">
-                                                                            </div>
-                                                                            <div class="hot_product_line_item"></div>
-                                                                            <gt name="hot_products|count" value="6">
-                                                                                <div class="hot_product_line_item">
-                                                                                </div>
-                                                                            </gt>
-                                                                        </gt>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <!--热门产品 END-->
-
-                                                            <!-- ABOUT US  START-->
-                                                            <div class="about_wrap">
-                                                                <div class="about_content">
-                                                                    <div class="about_title">
-                                                                        <span>ABOUT US</span>
-                                                                    </div>
-                                                                    <div class="about_description">
-                                                                        <p>{$index_setting.about_description}</p>
-                                                                    </div>
-                                                                    <div class="about_img">
-                                                                        <ul class="about_img_list">
-                                                                            <foreach name="index_setting.about_images"
-                                                                                item="vo">
-                                                                                <li class="about_img_item">
-                                                                                    <img src="{:cmf_get_image_url($vo.url)}"
-                                                                                        alt="{$vo.name}"
-                                                                                        title="{$vo.name}">
-                                                                                </li>
-                                                                            </foreach>
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="about_video_wrap">
-                                                                    <div class="about_video">
-                                                                        <div class="about_video_source">
-                                                                            <video width="100%" height="auto" controls
-                                                                                preload="metadata"
-                                                                                poster="{:cmf_get_image_url($index_setting.video_image)}">
-                                                                                <source
-                                                                                    src="{:cmf_get_file_url($index_setting.video)}"
-                                                                                    type="video/mp4">
-                                                                            </video>
-                                                                        </div>
-                                                                        <div class="about_video_description">
-                                                                            <p>{$index_setting.video_description}</p>
-                                                                            <div class="about_video_btn">
-                                                                                <a href="{:cmf_url('portal/index/intro',array('id'=>4))}"
-                                                                                    aria-label="intro">
-                                                                                    <img src="__TMPL__/public/assets/images/more-white.png"
-                                                                                        data-active_img="__TMPL__/public/assets/images/more-active.png"
-                                                                                        data-normal_img="__TMPL__/public/assets/images/more-white.png"
-                                                                                        alt="more" title="more">
-                                                                                </a>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="about_product_used">
-                                                                            <h2>Products are widely used</h2>
-                                                                            <p>At present, the company has achieved
-                                                                                remarkable results in more than 50
-                                                                                professional
-                                                                                fields such as aerospace, automobile and
-                                                                                ship,
-                                                                                petrochemical, railway, iron and steel
-                                                                                smelting,
-                                                                                machinery manufacturing and waste
-                                                                                incineration.</p>
-                                                                            <div class="about_product_used_item">
-                                                                                <img src="__TMPL__/public/assets/images/email-index.png"
-                                                                                    alt="email" title="email">
-                                                                                <p>{$site_info.email}</p>
-                                                                            </div>
-                                                                            <div class="about_product_used_line"></div>
-                                                                            <div class="about_product_used_item">
-                                                                                <img src="__TMPL__/public/assets/images/whatsapp-index.png"
-                                                                                    alt="whatsapp" title="whatsapp">
-                                                                                <p>{$site_info.whatsapp}</p>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <!--ABOUT US  END-->
-
-                                                                <!--CASE  START-->
-                                                                <div class="case_wrap">
-                                                                    <div class="case_title">
-                                                                        <span>INDUSTRY CASE</span>
-                                                                        <div class="case_more">
-                                                                            <a href="{:cmf_url('portal/index/case')}"
-                                                                                aria-label="case">
-                                                                                <img src="__TMPL__/public/assets/images/more.png"
-                                                                                    data-active_img="__TMPL__/public/assets/images/more-active.png"
-                                                                                    data-normal_img="__TMPL__/public/assets/images/more.png"
-                                                                                    alt="more_case" title="more_case">
-                                                                            </a>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="case_content">
-                                                                        <notempty name="case_list[0]">
-                                                                            <div class="case_content_left">
-                                                                                <div class="case_content_left_img">
-                                                                                    <img src="{:cmf_get_image_url($case_list[0]['thumbnail'])}"
-                                                                                        alt="case" title="{$case_list[0]['post_title']}">
-                                                                                    <p>{$case_list[0]['post_title']}</p>
-                                                                                    <div class="case_content_mask">
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </notempty>
-
-                                                                        <div class="case_content_right">
-                                                                            <ul class="case_content_right_list">
-                                                                                <foreach name="case_list" item="vo"
-                                                                                    offset="1">
-                                                                                    <li class="case_content_right_item">
-                                                                                        <img src="{:cmf_get_image_url($vo.thumbnail)}" alt="case" title="{$vo.post_title}">
-                                                                                        <p>{$vo.post_title}</p>
-                                                                                        <div
-                                                                                            class="case_content_mask case_content_right_mask">
-                                                                                        </div>
-                                                                                    </li>
-                                                                                </foreach>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="clear_both"></div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <include file="public@foot" />
-                    </div>
+<!--BANNER START-->
+<div class="banner">
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <foreach name="slides" item="vo">
+                <div class="swiper-slide">
+                    <img src="{:cmf_get_image_url($vo['image'])}" class="d-block w-100" alt="{$vo.title}">
+                    <div class="swiper-slide-title">{$vo.content}</div>
                 </div>
-            </div>
+            </foreach>
         </div>
+        <!-- 分页器容器 -->
+        <div class="swiper-pagination swiper-pagination-bullets"></div>
     </div>
-    <script type="text/javascript" src="__TMPL__/public/assets/js/home.js"></script>
-</body>
 
+    <script>
+        var mySwiper = new Swiper('.swiper', {
+            autoplay: true,//可选选项，自动滑动
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true, // 允许点击分页器子弹切换幻灯片
+            },
+        })
+
+    </script>
+</div>
+<!--BANNER END-->
+
+
+
+
+
+<include file="public@foot"/>
+
+</body>
 </html>
